@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-midnight text-white font-sans;
+  }
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-terracotta hover:bg-terracotta-light text-white font-bold px-6 py-3 rounded-full transition-all duration-200 text-sm cursor-pointer border-none;
+  }
+  .btn-secondary {
+    @apply bg-transparent border border-forest-light text-forest-light hover:bg-forest/20 font-semibold px-6 py-3 rounded-full transition-all duration-200 text-sm cursor-pointer;
+  }
+  .btn-gold {
+    @apply bg-gold hover:bg-gold-light text-charcoal font-bold px-6 py-3 rounded-full transition-all duration-200 text-sm cursor-pointer border-none;
+  }
+  .section-eyebrow {
+    @apply text-xs font-bold tracking-widest uppercase text-gold text-center mb-2;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl font-black text-center mb-2;
+  }
+  .section-sub {
+    @apply text-sm text-gray-400 text-center max-w-lg mx-auto mb-8 leading-relaxed;
+  }
+  .card-base {
+    @apply rounded-2xl border border-white/8 bg-white/4 p-6 transition-all duration-200;
+  }
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-white/15;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
